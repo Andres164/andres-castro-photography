@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Andres Castro Fotografia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-black text-white">
+
+  <!-- Hero -->
+<section id="hero" class="relative h-screen flex flex-col items-center justify-center text-center bg-black overflow-hidden">
+  <img id="hero-img" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-in" />
+  <div class="absolute inset-0 bg-black/40"></div>
+  <div class="relative z-10 px-4">
+    <h1 class="text-4xl font-bold mb-4 text-white">Andres Castro</h1>
+    <p class="bg-black/40 inline-block px-4 py-2 rounded text-white">
+      Inmortalizando tus aventuras
+    </p>
+  </div>
+</section>
+
+  <!-- Carrusel de álbumes -->
+  <section class="py-10 bg-black">
+    <div class="swiper">
+      <div class="swiper-wrapper" id="album-swiper-wrapper">
+        <!-- Slides generados por JS -->
+      </div>
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-button-next text-white"></div>
+    </div>
+  </section>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

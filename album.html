@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Álbum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-black text-white min-h-screen">
+
+  <!-- Header del álbum -->
+  <header class="relative px-4 pt-6 pb-4 text-center">
+    <a href="index.html" class="absolute left-4 top-6 text-white/80 hover:text-white">&larr;</a>
+    <h1 id="album-title" class="text-2xl font-semibold">Cargando...</h1>
+    <p id="album-date" class="text-sm text-white/60 mt-1"></p>
+    <p id="album-description" class="text-sm text-white/70 mt-3 max-w-md mx-auto"></p>
+
+    <button
+      id="download-all-btn"
+      class="mt-4 inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded text-sm"
+    >
+      ⬇ Descargar álbum completo
+    </button>
+    <p id="download-all-status" class="text-xs text-white/50 mt-2 hidden"></p>
+  </header>
+
+  <!-- Grid de fotos -->
+  <main class="grid grid-cols-3 gap-1 px-1 pb-10" id="photo-grid">
+    <!-- Generado por JS -->
+  </main>
+
+  <!-- Overlay de acciones dentro del lightbox (descarga / compartir) -->
+  <div id="lightbox-toolbar" class="fixed top-4 right-4 hidden gap-3" style="z-index: 2147483647;">
+    <button id="lightbox-download-btn" class="bg-black/60 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center">⬇</button>
+    <button id="lightbox-share-btn" class="bg-black/60 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center">⤴</button>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver/dist/FileSaver.min.js"></script>
+  <script src="assets/js/album.js"></script>
+</body>
+</html>

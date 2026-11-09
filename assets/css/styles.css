@@ -1,0 +1,56 @@
+.slide-media {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  background-color: #111; /* mientras carga */
+}
+
+.slide-media .bg-blur {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(30px);
+  transform: scale(1.15); /* evita bordes nítidos por el blur */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-media .fg-contain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-media.loaded .bg-blur,
+.slide-media.loaded .fg-contain {
+  opacity: 1;
+}
+
+.slide-media.loaded .bg-blur {
+  opacity: 0.6; /* oscurecido para que no compita con la foto nítida */
+}
+
+/* Album.html */
+.grid-photo-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.grid-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.grid-photo-item img.loaded {
+  opacity: 1;
+}
