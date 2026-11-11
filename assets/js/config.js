@@ -1,1 +1,1 @@
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://andres-castro-photography-723598043884.us-central1.run.app"; // DEV "http://localhost:8080";
